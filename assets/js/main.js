@@ -54,7 +54,7 @@ const deleteCard = (target) => {
     for (field in element) {
       if (element[field] == userName.textContent) {
         let users = JSON.parse(localStorage.getItem('users'));
-        users.splice(index);
+        users.splice(index, 1);
         localStorage.setItem('users', JSON.stringify(users));
         window.location.reload();
       };
